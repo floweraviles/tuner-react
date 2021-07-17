@@ -7,13 +7,13 @@ function SongListItem({ song }) {
         {song.is_favorite ? (
           <span>⭐️</span>
         ) : (
-          <span>&nbsp; &nbsp; &nbsp;</span>
+          <span className="notfav">X</span>
         )}
       </td>
       <td>
-        <a>
+        <p>
           {song.name}
-        </a>
+        </p>
       </td>
       <td>
         <Link to={`/songs/${song.id}`}>✏️</Link>

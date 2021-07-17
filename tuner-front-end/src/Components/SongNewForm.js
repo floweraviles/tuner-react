@@ -3,14 +3,17 @@ import { useState } from "react";
 import { useHistory, withRouter } from "react-router-dom";
 
 import { apiURL } from "../util/apiURL.js";
+
 const API = apiURL();
 
 function SongNewForm() {
   let history = useHistory();
 
   const addSong = async (newSong) => {
+    console.log(newSong)
     console.log('ABOUT TO SEND THE REQUEST');
     try {
+        // console.log(API)
       await axios.post(`${API}/songs`, newSong);
       console.log('SUCCESS, SENDING YOU TO INDEX PAGE')
       history.push(`/songs`);
@@ -37,6 +40,7 @@ function SongNewForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log("you work")
     addSong(song);
   };
   
@@ -85,7 +89,7 @@ function SongNewForm() {
           type="checkbox"
           onChange={handleCheckboxChange}
           checked={song.is_favorite}
-          required
+        //   required
         />
 
         <br />

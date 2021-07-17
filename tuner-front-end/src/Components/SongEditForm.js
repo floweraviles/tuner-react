@@ -34,11 +34,17 @@ function SongEditForm() {
   };
 
   useEffect(() => {
-    axios.get(`${API}/songs/${id}`).then(
-      (response) => setSong(response.data),
-      (error) => history.push(`/not-found`)
-    );
-  }, [id, history, API]);
+      const Edit = async() => {
+          try {
+              const res = await axios.get(`${API}/songs/${id}`)
+             setSong(res.data)
+              } catch (err) {
+                  console.log(err)
+              }
+
+      }
+      Edit();
+    }, [id, API]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
