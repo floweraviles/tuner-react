@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
 import { apiURL } from "../util/apiURL";
+import "./SongEditForm.css"
 
 function SongEditForm() {
   let { id } = useParams();
@@ -63,6 +64,7 @@ function SongEditForm() {
           placeholder="Name of Song"
           required
         />
+        <br />
         <label htmlFor="artist">Artist:</label>
         <input
           id="artist"
@@ -72,6 +74,7 @@ function SongEditForm() {
           placeholder="Artist of Song"
           required
         />
+        <br />
         <label htmlFor="album">Album:</label>
         <input
           id="album"
@@ -81,6 +84,7 @@ function SongEditForm() {
           onChange={handleTextChange}
           required
         />
+        <br />
         <label htmlFor="time">Time:</label>
         <input
           id="time"
@@ -90,6 +94,7 @@ function SongEditForm() {
           onChange={handleTextChange}
           required
         />
+        <br />
         <label htmlFor="is_favorite">Favorite:</label>
         <input
           id="is_favorite"
@@ -100,11 +105,11 @@ function SongEditForm() {
 
         <br />
 
-        <input type="submit" />
-      </form>
+        <button type="submit" >Submit</button>
       <Link to={`/songs/${id}`}>
         <button>Nevermind!</button>
       </Link>
+      </form>
     </div>
   );
 }

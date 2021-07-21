@@ -1,9 +1,25 @@
 .NavBar {
-    background-color: rgb(177, 152, 152);
-    display: block;
-  color: white;
-  text-align: left;
-  padding: 14px 16px;
-  text-decoration: none;
+    background-color: rgb(130, 58, 70);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+    color: seashell;
+    text-decoration: none;
 }
+.button {
+    background-color: rgb(179, 94, 94);
+    border: 5px solid rgb(179, 94, 94);
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: medium ;
+}
+
+.home {
+    font-weight: bold;
+    font-size: x-large;
+}
+
 

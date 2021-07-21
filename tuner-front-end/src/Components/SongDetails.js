@@ -5,6 +5,7 @@ import { apiURL } from "../util/apiURL";
 import './SongDetails.css'
 
 
+
 const API = apiURL();
 function SongDetails() {
   const [song, setSong] = useState([]);
@@ -40,21 +41,27 @@ function SongDetails() {
 
   return (
       <div className="list-container">
-      <p>{song.name}</p>
-      <p>{song.artist}</p>
-      <p>{song.album}</p>
-      <p>{song.time}</p>
-      <p>{song.is_favorite ? (
+        <h1>Song</h1>
+      <h2>{song.name}</h2>
+      <h3>{song.artist}</h3>
+      <h3>{song.album}</h3>
+      <h4>{song.time}</h4>
+      <h4>{song.is_favorite ? (
           <span>⭐️ Its a Favorite</span>
         ) : (
           <span className="notfav">X</span>
-        )}</p>
+        )}</h4>
       <Link to={`/songs/${song.id}/edit`}>
-      <button type="button">
+      <button className="edit" type="button">
           Edit
       </button>
       </Link>
-      <button onClick={handleDelete}>Delete</button>
+      <button  className="delete" onClick={handleDelete}>Delete</button>
+      <Link to={`/songs`}>
+        <button  className="back" type="button">
+          Go Back
+        </button>
+      </Link>
 
       </div>
   );

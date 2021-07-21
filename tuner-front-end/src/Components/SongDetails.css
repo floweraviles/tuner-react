@@ -1,5 +1,40 @@
+.list-container {
+    text-align: center;
+}
 .notfav {
     color: red;
     font-weight:900;
     font-size: x-large;
+}
+
+.edit {
+    background-color:rgb(249, 182, 58);
+    border: 5px solid rgb(249, 182, 58);
+    border-radius: 6px;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: small ;
+    
+}
+
+.delete {
+    background-color:rgb(201, 14, 14);
+    border: 5px solid rgb(201, 14, 14);
+    border-radius: 6px;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: small;
+    color: seashell;
+}
+
+.back {
+    background-color:rgb(113, 113, 232);
+    border: 5px solid rgb(113, 113, 232);
+    border-radius: 6px;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: small ;
 }

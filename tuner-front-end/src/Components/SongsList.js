@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { apiURL } from "../util/apiURL.js";
 import SongListItem from "./SongListItem";
+import "./SongsList.css"
 
 const API = apiURL();
 console.log(API);
@@ -23,14 +24,13 @@ function SongsList() {
   }, [setSongs]);
 
   return (
-    <div className="Songs">
+    <div className="songs">
       <section>
         <table>
           <thead>
             <tr>
               <th></th>
-              <th>Take me there</th>
-              <th>See this song</th>
+              <h1>List of Songs</h1>
             </tr>
           </thead>
           <tbody>

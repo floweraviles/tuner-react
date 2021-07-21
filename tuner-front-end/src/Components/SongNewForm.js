@@ -56,6 +56,7 @@ function SongNewForm() {
           placeholder="Name of Song"
           required
         />
+        <br />
         <label htmlFor="artist">Artist:</label>
         <input
           id="artist"
@@ -65,6 +66,7 @@ function SongNewForm() {
           placeholder="Artist of Song"
           required
         />
+        <br />
         <label htmlFor="album">Album:</label>
         <input
           id="album"
@@ -74,6 +76,7 @@ function SongNewForm() {
           placeholder="Album of Song"
           required
         />
+        <br />
          <label htmlFor="time">Time:</label>
         <input
           id="time"
@@ -83,6 +86,7 @@ function SongNewForm() {
           placeholder="Length of Song"
           required
         />
+        <br />
         <label htmlFor="is_favorite">Favorite:</label>
         <input
           id="is_favorite"
@@ -93,7 +97,7 @@ function SongNewForm() {
         />
 
         <br />
-        <input type="submit" />
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
